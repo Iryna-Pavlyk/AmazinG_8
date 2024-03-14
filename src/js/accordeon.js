@@ -2,38 +2,32 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Получаем все элементы аккордеона
   const accordionItems = document.querySelectorAll('.accordion-container .ac');
+  // Устанавливаем начальное состояние стрелок для каждого элемента аккордеона
+  accordionItems.forEach(item => setInitialArrowIcons(item));
 
-  // Устанавливаем иконку стрелки вниз видимой, а стрелку вверх скрытой для всех элементов
-  accordionItems.forEach(item => {
-    const arrowDown = item.querySelector('.arrow-down');
-    const arrowUp = item.querySelector('.arrow-up');
-    if (arrowDown && arrowUp) {
-      arrowDown.style.display = 'block'; // Сделать стрелку вниз видимой
-      arrowUp.style.display = 'none'; // Скрыть стрелку вверх
-    }
-  });
-
-  // Инициализация аккордеона
+  // Инициализация аккордеона с переопределением поведения стрелок при открытии и закрытии
   new Accordion('.accordion-container', {
     duration: 400,
     showMultiple: true,
-    onOpen: currentElement => {
-      const arrowDown = currentElement.querySelector('.arrow-down');
-      const arrowUp = currentElement.querySelector('.arrow-up');
-      if (arrowDown && arrowUp) {
-        arrowDown.style.display = 'none';
-        arrowUp.style.display = 'block';
-      }
-    },
-    onClose: currentElement => {
-      const arrowDown = currentElement.querySelector('.arrow-down');
-      const arrowUp = currentElement.querySelector('.arrow-up');
-      if (arrowDown && arrowUp) {
-        arrowDown.style.display = 'block';
-        arrowUp.style.display = 'none';
-      }
-    },
+    onOpen: element => toggleArrowIcons(element),
+    onClose: element => toggleArrowIcons(element),
   });
 });
+
+// Устанавливаем начальное состояние стрелок
+function setInitialArrowIcons(item) {
+  const arrowDown = item.querySelector('.arrow-down');
+  const arrowUp = item.querySelector('.arrow-up');
+  arrowDown.style.display = 'block'; // Показать стрелку вниз
+  arrowUp.style.display = 'none'; // Скрыть стрелку вверх
+}
+
+// Переключаем состояние стрелок
+function toggleArrowIcons(currentElement) {
+  const arrowDown = currentElement.querySelector('.arrow-down');
+  const arrowUp = currentElement.querySelector('.arrow-up');
+  arrowDown.style.display =
+    arrowDown.style.display === 'none' ? 'block' : 'none';
+  arrowUp.style.display = arrowUp.style.display === 'none' ? 'block' : 'none';
+}
