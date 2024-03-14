@@ -4,7 +4,6 @@
   | default @import url()
   |============================
 */
-@import url('./body.css');
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
