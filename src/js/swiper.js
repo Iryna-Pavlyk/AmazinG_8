@@ -4,7 +4,7 @@ import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 
 export const swiper = new Swiper('.swiper-container', {
-        modules: [Navigation, Keyboard],
+    modules: [Navigation, Keyboard],
         spaceBetween: 16,
         grabCursor: true,
         keyboard: {

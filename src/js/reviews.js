@@ -2,6 +2,9 @@
 async function fetchReviews() {
     try {
         const response = await fetch('https://portfolio-js.b.goit.study/api/reviews');
+         if (!response.ok) {
+            throw new Error(response.statusText || response.status);
+        }
         const data = await response.json();
 
         if (data.error) {
