@@ -19,16 +19,72 @@
   <script type="module" crossorigin src="/AmazinG_8/commonHelpers.js"></script>
   <link rel="modulepreload" crossorigin href="/AmazinG_8/assets/vendor-26107bcc.js">
   <link rel="stylesheet" href="/AmazinG_8/assets/vendor-f53b51ae.css">
-  <link rel="stylesheet" href="/AmazinG_8/assets/index-3f7ccc01.css">
+  <link rel="stylesheet" href="/AmazinG_8/assets/index-a363cfe4.css">
 </head>
 
 <body>
-  <header class="">
-  <nav></nav>
+  <header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <img src="../img/header/header.png" srcset="../img/header/header.png 1x, ../img/header/header@2x.png 2x" alt="Photo of Jefferson" class="header__logo-img" width="80" height="80">
+      <p class="header__logo-para">jefferson*</p>
+    </div>
+    <button class="header__menu-btn">
+      <span class="header__menu-btn-span">Menu</span>
+      <svg class="header__burger-icon" width="28" height="28">
+        <use href="../img/sprite.svg#icon-burger"></use>
+      </svg>
+    </button>
+    <div class="header__order-link-container">
+      <a href="" class="header__order-link">Order the project</a>
+    </div>
+  </div>
+
+  <div class="header__backdrop">
+    <button class="header__menu-close-btn">
+      <svg class="header__close-icon" width="28" height="28">
+        <use href="../img/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="" class="header__nav-link">About me</a></li>
+        <li class="header__nav-item"><a href="" class="header__nav-link">Benefits</a></li>
+        <li class="header__nav-item"><a href="" class="header__nav-link">Projects</a></li>
+        <li class="header__nav-item"><a href="" class="header__nav-link">FAQ</a></li>
+      </ul>
+    </nav>
+      <div class="header__mobile-order-link-container">
+        <a href="" class="header__order-link">Order the project</a>
+      </div>
+  </div>
 </header>
 
   <main>
-    <section></section>
+    <section class="section-hero">
+    <div class="hero-container">
+        <h1 class="hero__title">Hello.<br /> I’m Fullstack developer Lloyd Jefferson.</h1>
+        <ul class="hero__social-links-list">
+            <li class="hero__social-links-item">
+                <a href="https://www.instagram.com/goitclub/" class="hero__social-link">ig</a>
+            </li>
+            <li class="hero__social-links-item">
+                <a href="https://www.facebook.com/goITclub/" class="hero__social-link">fb</a>
+            </li>
+            <li class="hero__social-links-item">
+                <a href="https://www.youtube.com/c/GoIT" class="hero__social-link">yt</a>
+            </li>
+            <li class="hero__social-links-item">
+                <a href="https://github.com/Iryna-Pavlyk/AmazinG_8" class="hero__social-link">gh</a>
+            </li>
+            <li class="hero__social-links-item hero__email-item">
+                <address class="hero__address">
+                    <a href="mailto:lloydjefferson@gmail.com" class="hero__email-link"></a>
+                </address>
+            </li>
+        </ul>
+    </div>
+</section>
     <section class="about-me section">
   <div class="container">
     <h2 class="visually-hidden">About me</h2>
