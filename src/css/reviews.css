@@ -1,0 +1,105 @@
+
+.reviews-title {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.4);
+    text-transform: uppercase;
+}
+
+
+.swiper-slide {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 20px;
+    padding: 32px 24px;
+}
+
+.review-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+}
+
+.author {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+}
+
+.text {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+    width: 295px;
+    height: 158px;
+}
+
+.next-reviews-button,
+.previous-reviews-button {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    background-color: #1c1d20;
+    border-radius: 60px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    font-size: 16px;
+    color: white;
+    padding: 14px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+.previous-reviews-button {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.next-reviews-button:hover,
+.previous-reviews-button:hover {
+    transition-duration: 0.1s;
+    background-color: #ed3b44;
+}
+
+.next-reviews-button:after,
+.previous-reviews-button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+}
+
+.next-reviews-button:active:after,
+.previous-reviews-button:active::after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.next-reviews-button:active,
+.previous-reviews-button:active {
+    top: 1px;
+}
+
