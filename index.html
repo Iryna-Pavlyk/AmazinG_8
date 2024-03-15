@@ -19,7 +19,7 @@
   <script type="module" crossorigin src="/AmazinG_8/commonHelpers.js"></script>
   <link rel="modulepreload" crossorigin href="/AmazinG_8/assets/vendor-26107bcc.js">
   <link rel="stylesheet" href="/AmazinG_8/assets/vendor-f53b51ae.css">
-  <link rel="stylesheet" href="/AmazinG_8/assets/index-a363cfe4.css">
+  <link rel="stylesheet" href="/AmazinG_8/assets/index-6dda5122.css">
 </head>
 
 <body>
@@ -85,8 +85,8 @@
         </ul>
     </div>
 </section>
-    <section class="about-me section">
-  <div class="container">
+    <section class="about-section section" id="about">
+  <div class="container about-wrapper">
     <h2 class="visually-hidden">About me</h2>
 
     <div class="container-title">
@@ -98,12 +98,97 @@
           unique personality.
         </h3>
       </div>
-      <img class="about-image" src="./img/about/about.jpg" alt="about me" />
+      <img
+        class="about-image"
+        src="/AmazinG_8/assets/about-mob-min-77dd59f0.png"
+        alt="about me"
+      />
     </div>
 
     <!-- Accordeon -->
 
-    <div class="container-description"></div>
+    <div class="containar-accordion">
+      <ul class="accordion-container-about">
+        <li class="ac">
+          <h3 class="ac-header">
+            <button type="button" class="ac-trigger btn-text-about">
+              About me
+              <svg class="arrow arrow-down" width="24" height="16">
+                <use href="../img/sprite.svg#icon-arrow-down"></use>
+              </svg>
+              <svg class="arrow arrow-up" width="24" height="16">
+                <use href="../img/sprite.svg#icon-arrow-up"></use>
+              </svg>
+            </button>
+          </h3>
+          <div class="ac-panel">
+            <p class="ac-text">
+              I am Lloyd Jefferson, a talented programmer with extensive
+              expertise in software development. I have an understanding of
+              different programming languages and technologies, always ready to
+              improve my skills. I always follow the latest trends and look for
+              unconventional, creative solutions to problems. I have a high
+              level of analytical skills and am able to effectively solve even
+              the most difficult tasks encountered on the way. Able to work both
+              independently and in a team. I can effectively cooperate with
+              colleagues, exchanging ideas and finding optimal solutions.
+              Professional maturity allows you to calmly cope with challenges
+              and stressful situations, while maintaining a high quality of
+              work. I am always looking for opportunities for self-improvement.
+              I actively study new technologies and practices to stay abreast of
+              the latest innovations. I have a strong understanding of various
+              programming languages, frameworks and architectural concepts that
+              allow me to create efficient and scalable software.
+            </p>
+          </div>
+        </li>
+        <li class="ac">
+          <h3 class="ac-header">
+            <button type="button" class="ac-trigger btn-text-about">
+              ROLE
+              <svg class="arrow arrow-down" width="24" height="16">
+                <use href="../img/sprite.svg#icon-arrow-down"></use>
+              </svg>
+              <svg class="arrow arrow-up" width="24" height="16">
+                <use href="../img/sprite.svg#icon-arrow-up"></use>
+              </svg>
+            </button>
+          </h3>
+          <div class="ac-panel">
+            <p class="ac-text" id="text-about-2">Frontend development</p>
+            <p class="ac-text" id="text-about-3">HeadlessCMS,Wordpress</p>
+            <p class="ac-text" id="text-about-4">Blender(enjoy)</p>
+          </div>
+        </li>
+
+        <li class="ac">
+          <h3 class="ac-header">
+            <button type="button" class="ac-trigger btn-text-about">
+              EDUCATION
+              <svg class="arrow arrow-down" width="24" height="16">
+                <use href="../img/sprite.svg#icon-arrow-down"></use>
+              </svg>
+              <svg class="arrow arrow-up" width="24" height="16">
+                <use href="../img/sprite.svg#icon-arrow-up"></use>
+              </svg>
+            </button>
+          </h3>
+          <div class="ac-panel">
+            <p class="ac-text">
+              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
+              York
+            </p>
+            <p class="ac-text">
+              2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+              School, New York
+            </p>
+            <p class="ac-text">
+              2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
 
     <div class="container-swiper"></div>
   </div>
