@@ -2,7 +2,6 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 
-// export function initializeSwiper() {
     const swiper = new Swiper('.swiper-container', {
         spaceBetween: 35,
         grabCursor: true,
