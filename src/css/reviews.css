@@ -31,6 +31,11 @@ li {
     height: 302px;
 }
 
+.swiper-slide:hover {
+    border: 1px solid #ed3b44;
+    transition: 0.3s all linear;
+}
+
 .review-img-js {
     width: 48px;
     height: 48px;
@@ -86,7 +91,7 @@ li {
 
 .next-reviews-button:hover,
 .previous-reviews-button:hover {
-    transition-duration: 0.1s;
+    transition-duration: 0.3s all linear;
     background-color: #ed3b44;
 }
 
