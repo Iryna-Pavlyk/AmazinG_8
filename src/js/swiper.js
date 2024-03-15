@@ -2,8 +2,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 
-
-export function initializeSwiper() {
+// export function initializeSwiper() {
     const swiper = new Swiper('.swiper-container', {
         spaceBetween: 35,
         grabCursor: true,
@@ -21,9 +20,8 @@ export function initializeSwiper() {
             768: {
                 slidesPerView: 2,
             },
-            1280: {
+            1440: {
                 slidesPerView: 4,
             },
         },
     });
-}

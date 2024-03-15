@@ -8,6 +8,7 @@ async function fetchReviews() {
             showErrorMessage(data.error);
         } else {
             showReviews(data);
+           
         }
     } catch (error) {
         showErrorMessage('Failed to fetch reviews. Please try again later.');
@@ -30,15 +31,16 @@ function showReviews(reviews) {
             slide.classList.add('swiper-slide');
             slide.innerHTML = `
                 <div class="review-card" id="review_${review._id}"> 
-                    <div class="avatar">
-                        <img class="review-img" src="${review.avatar_url}" alt="Avatar of ${review.author}">
+                    <div class="avatar-review-js">
+                        <img class="review-img-js" src="${review.avatar_url}" alt="Avatar of ${review.author}">
                     </div>
-                    <div class="review-content">
-                        <p class="author">${review.author}</p>
-                        <p class="text">${review.review}</p>
+                    <div class="review-content-js">
+                        <p class="author-review-js">${review.author}</p>
+                        <p class="text-review-">${review.review}</p>
                     </div>
                 </div>`;
             reviewsList.appendChild(slide);
+            
         });
     }
 }
@@ -49,7 +51,8 @@ function showErrorMessage(message) {
 }
 
 
-
 // Виклик функції отримання відгуків при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', fetchReviews);
+
+
 
