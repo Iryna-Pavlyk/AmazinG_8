@@ -7,6 +7,12 @@
     letter-spacing: -0.02em;
     color: rgba(250, 250, 250, 0.4);
     text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: auto;  
 }
 
 
@@ -16,22 +22,39 @@
     padding: 32px 24px;
 }
 
-.review-img {
+.swiper-wrapper {
+    width: 343px;
+    height: 302px;
+}
+
+.review-card:hover {
+    transform: translateY(2px);
+    transition: 0.3s all linear;
+}
+
+.swiper-slide:hover {
+    border: 1px solid #ed3b44;
+    transition: 0.3s all linear;
+}
+
+.review-img-js {
     width: 48px;
     height: 48px;
     border-radius: 10px;
+    margin-bottom: 32px;
 }
 
-.author {
+.author-review-js {
     font-family: "Inter Tight", sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: #fafafa;
+    margin-bottom: 10px;
 }
 
-.text {
+.text-review-js {
     font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -60,6 +83,7 @@
     cursor: pointer;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
+    margin-top: 32px;
 }
 
 .previous-reviews-button {
@@ -68,7 +92,7 @@
 
 .next-reviews-button:hover,
 .previous-reviews-button:hover {
-    transition-duration: 0.1s;
+    transition-duration: 0.3s all linear;
     background-color: #ed3b44;
 }
 
@@ -101,5 +125,13 @@
 .next-reviews-button:active,
 .previous-reviews-button:active {
     top: 1px;
+}
+
+
+
+/* Mobile */
+@media screen and (min-width: 320px) {
+
+    
 }
 
