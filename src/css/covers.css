@@ -1,0 +1,70 @@
+ .container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto; 
+  background-image: url('../img/covers/ellipse.png');
+  background-position: top;
+  
+}
+ .container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+ 
+} 
+ /* Клас для прихованого тексту, щоб не відображати його, але зберегти доступність для краулерів зробив Геннадій */ 
+ 
+
+/* Контейнер для картинок */
+.covers-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три колонки з однаковою шириною */
+}
+
+/* Застосування нахилу до перших трьох картинок */
+.covers-item:nth-child(-n + 3) {
+  transform: skew(-5deg); /* Нахил до лівого краю */
+}
+
+/* Застосування нахилу до наступних трьох картинок */
+.covers-item:nth-child(n + 4):nth-child(-n + 6) {
+  transform: skew(5deg); /* Нахил до правого краю */
+}
+
+/* Застосування нахилу до останніх трьох картинок */
+.covers-item:nth-child(n + 7) {
+  transform: skew(-5deg); /* Нахил до лівого краю */
+}
+.covers-list{
+  margin-right: 20px;
+  margin-bottom: 20px;
+  
+}
+/* Стилі для зображень */
+
+.my-covers-item-img {
+  height: auto; /* Автоматична висота */
+  transform: skewY(30deg) translateX(100%) translateY(100%); /* Нахил у правий кут і початковий вихід з нижнього правого вугла */
+  opacity: 0; /* Початкова прозорість - 0 */
+  animation: slideInFromBottomRight 2s ease-in-out forwards; /* Анімація відображення зображення */
+}
+
+/* Ключові кадри анімації */
+@keyframes slideInFromBottomRight {
+  from {
+    transform: skewY(10deg) translateX(100%) translateY(100%); /* Початкова позиція - нижній правий вугол */
+    opacity: 0; /* Початкова прозорість - 0 */
+  }
+  to {
+    transform: skewY(10deg) translateX(0) translateY(0); /* Кінцева позиція - верхній лівий вугол */
+    opacity: 1; /* Кінцева прозорість - 1 */
+  }
+}
