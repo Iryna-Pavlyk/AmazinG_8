@@ -8,8 +8,10 @@ const menuBtn = document.querySelector(".header__menu-btn")
 const closeBtn = document.querySelector(".header__menu-close-btn")
 
 menuBtn.addEventListener("click", () => {
-    backdrop.classList.remove("visually-hidden")
-})
-closeBtn.addEventListener("click", () => {
-    backdrop.classList.add("visually-hidden")
-})
+    window.innerWidth < 768 ?
+        backdrop.classList.remove("visually-hidden") :
+            backdrop.classList.toggle("visually-hidden")
+    })
+    closeBtn.addEventListener("click", () => {
+        backdrop.classList.add("visually-hidden")
+    })

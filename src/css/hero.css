@@ -4,6 +4,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.hero-container {
+    margin: 0 auto;
+    max-width: 343px;
+}
 .hero__title {
     font-weight: 500;
     font-size: 50px;
@@ -39,4 +43,41 @@
 }
 .hero__address {
     font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+    .section-hero {
+        padding: 300px 32px 32px 32px;
+    }
+    .hero__title {
+        font-size: 90px;
+    }
+    .hero__social-links-list {
+        gap: 8px;
+    }
+    .hero__social-links-item {
+        font-size: 16px;
+        min-width: 55px;
+        height: 55px;
+    }
+    .hero__email-item {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+    .section-hero {
+        background-image: url(../img/hero-bg/hero-bg-tablet.png);
+    }
+    .hero-container {
+        max-width: 704px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .section-hero {
+        background-image: url(../img/hero-bg/hero.png);
+    }
+    .hero-container {
+        max-width: 1376px;
+    }
 }
