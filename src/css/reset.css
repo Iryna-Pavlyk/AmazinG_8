@@ -33,3 +33,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+}
