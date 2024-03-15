@@ -36,7 +36,7 @@ function showReviews(reviews) {
                     </div>
                     <div class="review-content-js">
                         <p class="author-review-js">${review.author}</p>
-                        <p class="text-review-">${review.review}</p>
+                        <p class="text-review-js">${review.review}</p>
                     </div>
                 </div>`;
             reviewsList.appendChild(slide);
