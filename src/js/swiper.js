@@ -1,9 +1,11 @@
 // Ініціалізація Swiper
 import Swiper from 'swiper';
 import 'swiper/css';
+import { Navigation, Keyboard } from 'swiper/modules';
 
-    const swiper = new Swiper('.swiper-container', {
-        spaceBetween: 35,
+export const swiper = new Swiper('.swiper-container', {
+        modules: [Navigation, Keyboard],
+        spaceBetween: 16,
         grabCursor: true,
         keyboard: {
             enabled: true,

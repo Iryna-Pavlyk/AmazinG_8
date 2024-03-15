@@ -42,6 +42,7 @@ function showReviews(reviews) {
             reviewsList.appendChild(slide);
             
         });
+       
     }
 }
 
