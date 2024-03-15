@@ -31,6 +31,11 @@ li {
     height: 302px;
 }
 
+.review-card:hover {
+    transform: translateY(2px);
+    transition: 0.3s all linear;
+}
+
 .swiper-slide:hover {
     border: 1px solid #ed3b44;
     transition: 0.3s all linear;
