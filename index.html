@@ -19,7 +19,7 @@
   <script type="module" crossorigin src="/AmazinG_8/commonHelpers.js"></script>
   <link rel="modulepreload" crossorigin href="/AmazinG_8/assets/vendor-26107bcc.js">
   <link rel="stylesheet" href="/AmazinG_8/assets/vendor-f53b51ae.css">
-  <link rel="stylesheet" href="/AmazinG_8/assets/index-e8551df1.css">
+  <link rel="stylesheet" href="/AmazinG_8/assets/index-4b10c9c9.css">
 </head>
 
 <body>
@@ -656,9 +656,13 @@ class="reviews-section section">
 
         <!-- Form -->
         <form class="form-sect-work">
-            <input class="input-sect-work" type="email" name="user_email" placeholder="clients@gmail.com"
-                pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required>
-            <input class="input-sect-work" type="text" placeholder="coments">
+            <div class="container-input-email">
+                <input class="input-sect-work" type="email" name="email_work" placeholder="clients@gmail.com"
+                    pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required autocomplete="off">
+                <p class="input-email-text">Success!</p>
+                <p class="input-email-text2">Invalid email, try again</p>
+            </div>
+            <input class="input-sect-work" type="text" name="message_work" placeholder="coments" autocomplete="off">
             <button class="btn-sect-work" type="submit">send</button>
         </form>
         <!-- Form -->
@@ -666,7 +670,7 @@ class="reviews-section section">
         <!-- Address -->
         <div class="address-work-container">
             <address class="email-sect-work address-sect-work"><a class="email-link-work"
-                    href="lloydjefferson@gmail.com">lloydjefferson@gmail.com</a></address>
+                    href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a></address>
             <address class="tel-sect-work address-sect-work"><a class="tel-link-work" href="tel:+380111111111">+380 11
                     111 11 11</a></address>
         </div>
@@ -674,12 +678,14 @@ class="reviews-section section">
     </div>
 
     <!-- Modal -->
-    <div class="backdrop-sect-work is-open">
+    <div class="backdrop-sect-work">
         <div class="modal-sect-work">
-            <button></button>
-            <h3>text and supporting text</h3>
-            <p>The manager will contact you shortly to discuss further details and opportunities for cooperation. Please
-                stay in touch.</p>
+            <button class="btn-close-work" type="button"><svg class="backdrop-close-icon" width="22" height="22">
+                    <use href="../img/sprite.svg#icon-close"></use>
+                </svg></button>
+            <h3 class="modal-title-work">Thank you for your interest in cooperation!</h3>
+            <p class="modal-text-work">The manager will contact you shortly to discuss further details and opportunities
+                for cooperation. Please stay in touch.</p>
         </div>
     </div>
     <!-- /Modal -->
