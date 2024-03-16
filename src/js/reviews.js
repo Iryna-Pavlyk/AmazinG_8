@@ -11,7 +11,7 @@ async function fetchReviews() {
             showErrorMessage(data.error);
         } else {
             showReviews(data);
-           
+            
         }
     } catch (error) {
         showErrorMessage('Failed to fetch reviews. Please try again later.');

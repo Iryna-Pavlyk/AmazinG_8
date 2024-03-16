@@ -4,7 +4,9 @@ import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 
 export const swiper = new Swiper('.swiper-container', {
-    modules: [Navigation, Keyboard],
+
+        modules: [Navigation, Keyboard],
+        loop: true,
         spaceBetween: 16,
         grabCursor: true,
         keyboard: {
@@ -13,7 +15,7 @@ export const swiper = new Swiper('.swiper-container', {
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
-        },
+    },
         breakpoints: {
             375: {
                 slidesPerView: 1,
@@ -24,5 +26,8 @@ export const swiper = new Swiper('.swiper-container', {
             1440: {
                 slidesPerView: 4,
             },
-        },
-    });
+    },
+       
+});
+    
+
