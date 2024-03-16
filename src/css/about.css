@@ -45,9 +45,12 @@
 }
 
 /* Общие стили для заголовка раздела, кнопок и текста внутри аккордеона */
-
 .about-section .ac-trigger.btn-text-about,
 .about-section .ac .ac-panel .ac-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-style: normal;
+  padding-left: 0px;
+  padding-right: 0px;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -60,14 +63,77 @@
   color: rgba(250, 250, 250, 0.4);
   font-size: 20px;
 }
+
+/* Стили стрелок в кнопках аккордеона */
+.about-arrow {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 9px;
+  width: 36px;
+  height: 36px;
+  transform: rotate(-180deg);
+}
+
+.ac-trigger .about-arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
 /* Стиль для контейнера аккордеона, установка прозрачного фона */
 .about-section .ac {
   background-color: transparent;
+  border: none; /* Убираем общую границу */
 }
 
 .accordion-container-about {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+/* Стили псевдоэлементов и интерактивных состояний */
+
+.about-section .ac::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: rgba(250, 250, 250, 0.2);
+  width: 100%;
+  margin-top: 32px;
+}
+
+.accordion-container-about li {
+  margin-top: 0px;
+}
+
+.about-section .accordion-container-about .btn-text-about {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+}
+/* swipers styles */
+
+.about-swiper-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0px;
+}
+.about-swiper-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #ed3b44;
+}
+.swiper-button-prev {
+  fill: aliceblue;
 }
 /* ======= /ABOUT MOBILE SECTION ======= */
