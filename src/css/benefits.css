@@ -9,9 +9,6 @@
 }
 
 .benefits-list {
-  display: flex;
-  /* flex-direction: column; */
-  gap: 16px;
   margin: 32px 0;
 }
 
@@ -21,6 +18,7 @@
   width: 344px;
   height: 270px;
   background: #242527;
+  margin-bottom: 16px;
 }
 
 .container-icon {
