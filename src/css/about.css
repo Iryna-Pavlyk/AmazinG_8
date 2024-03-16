@@ -1,14 +1,8 @@
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+/* +++++++ ABOUT MOBILE SECTION +++++++*/
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .container-title {
@@ -49,3 +43,31 @@
   width: 343px;
   height: 500px;
 }
+
+/* Общие стили для заголовка раздела, кнопок и текста внутри аккордеона */
+
+.about-section .ac-trigger.btn-text-about,
+.about-section .ac .ac-panel .ac-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 1);
+}
+/* Стили для кнопок аккордеона*/
+.about-section .ac-trigger.btn-text-about {
+  font-weight: 600;
+  color: rgba(250, 250, 250, 0.4);
+  font-size: 20px;
+}
+/* Стиль для контейнера аккордеона, установка прозрачного фона */
+.about-section .ac {
+  background-color: transparent;
+}
+
+.accordion-container-about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* ======= /ABOUT MOBILE SECTION ======= */
