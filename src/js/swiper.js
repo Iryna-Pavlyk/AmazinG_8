@@ -3,9 +3,10 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 
-export const swiper = new Swiper('.swiper-container', {
 
+export const swiper = new Swiper('.swiper-container', {
         modules: [Navigation, Keyboard],
+        slidesPerView: 'auto',
         loop: true,
         spaceBetween: 16,
         grabCursor: true,
@@ -27,7 +28,8 @@ export const swiper = new Swiper('.swiper-container', {
                 slidesPerView: 4,
             },
     },
-       
 });
-    
+
+
+
 
