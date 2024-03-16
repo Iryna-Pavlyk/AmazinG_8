@@ -29,6 +29,8 @@ export const swiper = new Swiper('.swiper-container', {
 
 new Swiper('.projectsSwiper', {
   modules: [Navigation, Keyboard],
+  slidesPerView: 'auto',
+  loop: true,
   keyboard: {
     enabled: true,
   },
