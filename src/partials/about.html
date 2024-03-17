@@ -11,11 +11,43 @@
           unique personality.
         </h3>
       </div>
-      <img
-        class="about-image"
-        src="./img/about/about-mob-min.png"
-        alt="about me"
-      />
+
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            ./img/about/about-desc-min.png    1x,
+            ./img/about/about-desc@2x-min.png 2x
+          "
+          width="680"
+          heigth="700"
+        />
+        <source
+          media="(min-width: 768px) and (max-width: 1439px)"
+          srcset="
+            ./img/about/about-tab-min.png    1x,
+            ./img/about/about-tab@2x-min.png 2x
+          "
+          width="704"
+          height="700"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./img/about/about-mob-min.png    1x,
+            ./img/about/about-mob@2x-min.png 2x
+          "
+          width="343"
+          height="500"
+        />
+        <img
+          class="about-image"
+          src="./img/about/about-mob-min.png"
+          alt="about me"
+          width="343"
+          height="500"
+        />
+      </picture>
     </div>
 
     <!-- Accordeon -->
@@ -106,22 +138,18 @@
       </ul>
     </div>
 
-    <div class="about-swiper-container">
-      <ul class="swiper-wrapper about-swiper-list">
-        <li class="swiper-slide about-swiper-items"><p>HTML/CSS</p></li>
-        <li class="swiper-slide about-swiper-items"><p>JavaScript</p></li>
-        <li class="swiper-slide about-swiper-items"><p>React</p></li>
-        <li class="swiper-slide about-swiper-items"><p>Node.js</p></li>
-        <li class="swiper-slide about-swiper-items"><p>React Native</p></li>
-        <li class="swiper-slide about-swiper-items"><p>Soft Skills</p></li>
-        <li class="swiper-slide about-swiper-items"><p>Git</p></li>
-      </ul>
-      <div class="swiper-button-prev">
-        <button type="button" class="previous-about-button">
-          <svg class="previous-arrow" width="24" height="24">
-            <use href="../img/sprite.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
+    <!-- Swiper -->
+    <div class="about-swipper-wrapper">
+      <div class="about-swiper-container">
+        <ul class="swiper-wrapper about-swiper-list">
+          <li class="swiper-slide about-swiper-items"><p>HTML/CSS</p></li>
+          <li class="swiper-slide about-swiper-items"><p>JavaScript</p></li>
+          <li class="swiper-slide about-swiper-items"><p>React</p></li>
+          <li class="swiper-slide about-swiper-items"><p>Node.js</p></li>
+          <li class="swiper-slide about-swiper-items"><p>React Native</p></li>
+          <li class="swiper-slide about-swiper-items"><p>Soft Skills</p></li>
+          <li class="swiper-slide about-swiper-items"><p>Git</p></li>
+        </ul>
       </div>
       <div class="swiper-button-next">
         <button type="button" class="next-about-button">
