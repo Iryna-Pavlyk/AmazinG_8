@@ -13,21 +13,15 @@
     margin-bottom: 32px;
 }
 
-.swiper-container {
+#swiper-container-style {
     width: 100%;
     height: auto;  
 }
 
-
-.swiper-slide {
+#swiper-slide {
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
     padding: 32px 24px;
-}
-
-.swiper-wrapper {
-    width: 343px;
-    height: 302px;
 }
 
 .review-card:hover {
@@ -35,7 +29,7 @@
     transition: 0.3s all linear;
 }
 
-.swiper-slide:hover {
+#swiper-slide:hover {
     border: 1px solid #ed3b44;
     transition: 0.3s all linear;
 }
