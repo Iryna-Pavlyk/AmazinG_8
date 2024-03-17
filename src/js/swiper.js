@@ -8,6 +8,8 @@ export const swiper = new Swiper('.swiper-container', {
    slidesPerView: 4,
   allowTouchMove: true,
   slideToClickedSlide: true,
+  observer: true,
+	observeParents: true,
   spaceBetween: 16,
   grabCursor: true,
   keyboard: {
