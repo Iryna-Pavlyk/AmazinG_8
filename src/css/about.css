@@ -6,7 +6,7 @@
   min-width: 0;
 }
 
-.container-title {
+.about-container-title {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
   gap: 16px;
 }
 
-.container-title-text {
+.about-container-title-text {
   display: flex;
   justify-content: center;
   border-radius: 24px;
@@ -26,7 +26,7 @@
   padding-right: 32px;
   padding-top: 32px;
 }
-.header-title {
+.about-header-title {
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16667;
@@ -46,7 +46,7 @@
 }
 
 /* Общие стили для заголовка раздела, кнопок и текста внутри аккордеона */
-.about-section .ac-trigger.btn-text-about,
+.about-section .ac-trigger.about-text-btn,
 .about-section .ac .ac-panel .ac-text {
   font-family: 'Inter Tight', sans-serif;
   font-style: normal;
@@ -64,7 +64,7 @@
   gap: 32px;
 }
 /* Стили для кнопок аккордеона*/
-.about-section .ac-trigger.btn-text-about {
+.about-section .ac-trigger.about-text-btn {
   font-weight: 600;
   color: rgba(250, 250, 250, 0.4);
   font-size: 20px;
@@ -113,7 +113,7 @@
   margin-top: 0px;
 }
 
-.about-section .accordion-container-about .btn-text-about {
+.about-section .accordion-container-about .about-text-btn {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -144,45 +144,40 @@
   width: 130px;
   height: 130px;
   border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  transition: 0.3s all linear;
   min-width: 0;
+}
+.about-section .about-swiper-items:hover {
+  border: 1px solid #ed3b44;
 }
 .about-slide-active {
   background-color: #ed3b44;
   transition: 0.3s all linear;
 }
 
-.next-about-button,
-.previous-about-button {
+.about-button-next {
   position: relative;
-  width: 52px;
-  height: 52px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #1c1d20;
   border-radius: 60px;
-  border: 1px solid rgba(250, 250, 250, 0.5);
-  font-size: 16px;
-  color: white;
-  padding: 14px;
+  border: none;
   cursor: pointer;
-  user-select: none;
-  text-align: center;
   text-decoration: none;
-  cursor: pointer;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  margin-top: 32px;
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
 }
 
-.previous-about-button {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-}
-
-.next-about-button:hover,
-.previous-about-button:hover {
+.about-button-next:hover {
   transition-duration: 0.3s all linear;
   background-color: #ed3b44;
 }
 
-.next-about-button:after {
+.about-button-next:after {
   content: '';
   display: block;
   position: absolute;
@@ -196,7 +191,7 @@
   box-shadow: 0 0 10px 40px white;
 }
 
-.next-about-button:active:after {
+.about-button-next:active:after {
   box-shadow: 0 0 0 0 white;
   border-radius: 4em;
   left: 0;
@@ -205,14 +200,14 @@
   transition: 0s;
 }
 
-.next-about-button:active {
-  top: 1px;
+.about-section .about-next-arrow {
+  stroke: #3b3b3b;
 }
 
 .about-swipper-wrapper {
   width: 100%;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 55px;
 }
@@ -222,13 +217,10 @@
 /* +++++++ ABOUT TABLET SECTION (min-width: 768px)+++++++*/
 @media screen and (min-width: 768px) {
   .about-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    min-width: 0;
+    gap: 64px;
   }
 
-  .container-title {
+  .about-container-title {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -237,14 +229,14 @@
     gap: 16px;
   }
 
-  .container-title-text {
+  .about-container-title-text {
     width: 704px;
     height: 700px;
     padding-left: 64px;
     padding-right: 64px;
     padding-top: 64px;
   }
-  .header-title {
+  .about-header-title {
     font-size: 38px;
     line-height: 1.05263;
   }
@@ -258,7 +250,7 @@
     gap: 16px;
   }
 
-  .about-section .ac-trigger.btn-text-about {
+  .about-section .ac-trigger.about-text-btn {
     font-size: 16px;
   }
   .about-arrow {
@@ -272,19 +264,19 @@
     height: 200px;
   }
 
-  .swiper-button-next {
-    top: 20%;
-    right: 0;
-  }
   .about-swipper-wrapper {
     gap: 64px;
+  }
+  .about-button-next {
+    width: 40px;
+    height: 40px;
   }
 }
 /* ======= /ABOUT TABLET SECTION (min-width: 768px)======= */
 
 /* +++++++ ABOUT DESKTOP SECTION (min-width: 1440px)+++++++*/
 @media screen and (min-width: 1440px) {
-  .container-title {
+  .about-container-title {
     flex-direction: row;
   }
 
@@ -299,6 +291,10 @@
     margin-right: 68px;
     margin-left: auto;
   }
+  .about-wrapper {
+    gap: 64px;
+  }
+
   .about-swipper-wrapper {
     gap: 72px;
   }
