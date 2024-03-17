@@ -45,6 +45,16 @@
     font-style: normal;
 }
 
+@media screen and (max-width: 374px) {
+    .hero__social-links-list {
+        gap: 8px 4px;
+        flex-wrap: wrap;
+    }
+    /* .hero__email-item {
+        position: absolute;
+    } */
+}
+
 @media screen and (min-width: 768px) {
     .section-hero {
         padding: 300px 32px 32px 32px;
@@ -75,9 +85,32 @@
 }
 @media screen and (min-width: 1440px) {
     .section-hero {
-        background-image: url(../img/hero-bg/hero.png);
+        background-image: url(../img/hero-bg/hero-bg-desktop.png);
     }
     .hero-container {
         max-width: 1376px;
+    }
+    .hero__title {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1084px;
+    }
+}
+
+
+/* Завантаження 2х бекграунду для ретіна дісплеїв */
+@media screen and (min-resolution: 192dpi) and (max-width: 374px) {
+    .section-hero {
+        background-image: url(../img/hero-bg/hero-bg-mobile@2x.png);
+    }
+}
+@media screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1439px) {
+    .section-hero {
+        background-image: url(../img/hero-bg/hero-bg-tablet@2x.png);
+    }
+}
+@media screen and (min-resolution: 192dpi) and (min-width: 1440px) {
+    .section-hero {
+        background-image: url(../img/hero-bg/hero-bg-desktop@2x.png);
     }
 }
