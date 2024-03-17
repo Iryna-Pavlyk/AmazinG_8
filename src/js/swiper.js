@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 
-export const swiper = new Swiper('.swiper-container', {
+export const swiper = new Swiper('#swiper-container-style', {
   modules: [Navigation, Keyboard],
   spaceBetween: 16,
   grabCursor: true,
