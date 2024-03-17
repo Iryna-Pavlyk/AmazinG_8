@@ -1,5 +1,4 @@
 /* Общие стили для раздела FAQ */
-
 .title-faq {
   font-weight: normal;
   font-size: 16px;
@@ -10,14 +9,15 @@
   color: rgba(250, 250, 250, 0.4);
 }
 
-/* Стили контейнера аккордеона */
+/* Стили для контейнера аккордеона */
 .faq-section .accordion-container {
   position: relative;
+  overflow: hidden;
 }
 
 .faq-section .ac {
-  background-color: transparent; /* Прозрачный фон для контейнеров аккордеона */
-  border: none; /* Убираем общую границу */
+  background-color: transparent;
+  border: none;
 }
 
 /* Стили для кнопок аккордеона */
@@ -27,8 +27,8 @@
   padding: 1px 77px 1px 1px;
   font-size: 20px;
   color: rgba(250, 250, 250, 1);
-  position: relative; /* Для корректного позиционирования псевдоэлемента */
-  padding-top: 20px; /* Отступ сверху для кнопки, чтобы полоса не перекрывала текст */
+  position: relative; /* Для позиционирования псевдоэлемента */
+  padding-top: 20px; /* Отступ сверху для текста */
   padding-bottom: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
@@ -43,10 +43,6 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-}
-
-.responsive-break {
-  display: block;
 }
 
 /* Стили стрелок в кнопках аккордеона */
@@ -68,10 +64,10 @@
 .faq-section .ac-trigger .arrow {
   right: 0px;
   top: 20px;
-  transform: translateY(-0%);
+  transform: translateY(0%);
 }
 
-/* Управление отображением стрелок */
+/* Переключение отображения стрелок */
 .ac-trigger .arrow-down,
 .is-active .ac-trigger .arrow-up {
   display: block;
@@ -99,7 +95,7 @@
 }
 
 .faq-section .accordion-container::after {
-  bottom: -11px;
+  bottom: 0px;
 }
 
 .faq-section .accordion-container > li:last-child {
@@ -115,18 +111,87 @@
   display: none;
 }
 
+/* Медиа-запросы для адаптивности */
 @media (min-width: 768px) {
   .responsive-break {
     display: none;
   }
+
+  .responsive-breaks {
+    display: block;
+  }
+
   .faq-section .ac-trigger.btn-text-faq {
-    padding: 32px 130px 32px 1px;
+    padding: 32px 130px 29px 1px;
   }
+
   .faq-section .ac .ac-panel .ac-text {
-    padding: 0px 47px 24px 1px;
-    width: 656px;
+    padding: 0px 90px 24px 1px;
   }
+
   .faq-section .ac-trigger .arrow {
     top: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .faq-section .accordion-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .faq-section .ac-trigger.btn-text-faq {
+    padding: 32px 73px 29px 1px;
+  }
+
+  .faq-section .ac .ac-panel .ac-text {
+    padding: 0px 42px 24px 1px;
+  }
+
+  .faq-section .accordion-container .ac {
+    width: calc(50% - 32px);
+  }
+
+  /* Контроль порядка элементов */
+  .item-one {
+    order: 1;
+  }
+  .item-two {
+    order: 3;
+  }
+  .item-three {
+    order: 5;
+  }
+  .item-four {
+    order: 2;
+  }
+  .item-five {
+    order: 4;
+  }
+  .item-six {
+    order: 6;
+  }
+
+  /* Вертикальная линия для декоративных целей */
+  .vertical-line::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    bottom: 2px;
+    left: 50%;
+    width: 1px;
+    background-color: rgba(250, 250, 250, 0.2);
+    z-index: 10;
+  }
+
+  .faq-section .ac-trigger.btn-text-faq:before {
+    width: 110%;
+    left: -4%;
+  }
+
+  .faq-section .accordion-container::after {
+    bottom: 1px;
   }
 }
