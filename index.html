@@ -19,7 +19,7 @@
   <script type="module" crossorigin src="/AmazinG_8/commonHelpers.js"></script>
   <link rel="modulepreload" crossorigin href="/AmazinG_8/assets/vendor-2e5c0932.js">
   <link rel="stylesheet" href="/AmazinG_8/assets/vendor-f53b51ae.css">
-  <link rel="stylesheet" href="/AmazinG_8/assets/index-3599635c.css">
+  <link rel="stylesheet" href="/AmazinG_8/assets/index-bbe83cd4.css">
 </head>
 
 <body>
@@ -98,11 +98,34 @@
           unique personality.
         </h3>
       </div>
-      <img
-        class="about-image"
-        src="/AmazinG_8/assets/about-mob-min-77dd59f0.png"
-        alt="about me"
-      />
+
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="/AmazinG_8/assets/about-desc-min-70b757e6.png 1x, /AmazinG_8/assets/about-desc@2x-min-74d1ba78.png 2x"
+          width="680"
+          heigth="700"
+        />
+        <source
+          media="(min-width: 768px) and (max-width: 1439px)"
+          srcset="/AmazinG_8/assets/about-tab-min-191b551c.png 1x, /AmazinG_8/assets/about-tab@2x-min-2f47e584.png 2x"
+          width="704"
+          height="700"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="/AmazinG_8/assets/about-mob-min-77dd59f0.png 1x, /AmazinG_8/assets/about-mob@2x-min-3a5e98e2.png 2x"
+          width="343"
+          height="500"
+        />
+        <img
+          class="about-image"
+          src="/AmazinG_8/assets/about-mob-min-77dd59f0.png"
+          alt="about me"
+          width="343"
+          height="500"
+        />
+      </picture>
     </div>
 
     <!-- Accordeon -->
@@ -193,22 +216,18 @@
       </ul>
     </div>
 
-    <div class="about-swiper-container">
-      <ul class="swiper-wrapper about-swiper-list">
-        <li class="swiper-slide about-swiper-items"><p>HTML/CSS</p></li>
-        <li class="swiper-slide about-swiper-items"><p>JavaScript</p></li>
-        <li class="swiper-slide about-swiper-items"><p>React</p></li>
-        <li class="swiper-slide about-swiper-items"><p>Node.js</p></li>
-        <li class="swiper-slide about-swiper-items"><p>React Native</p></li>
-        <li class="swiper-slide about-swiper-items"><p>Soft Skills</p></li>
-        <li class="swiper-slide about-swiper-items"><p>Git</p></li>
-      </ul>
-      <div class="swiper-button-prev">
-        <button type="button" class="previous-about-button">
-          <svg class="previous-arrow" width="24" height="24">
-            <use href="../img/sprite.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
+    <!-- Swiper -->
+    <div class="about-swipper-wrapper">
+      <div class="about-swiper-container">
+        <ul class="swiper-wrapper about-swiper-list">
+          <li class="swiper-slide about-swiper-items"><p>HTML/CSS</p></li>
+          <li class="swiper-slide about-swiper-items"><p>JavaScript</p></li>
+          <li class="swiper-slide about-swiper-items"><p>React</p></li>
+          <li class="swiper-slide about-swiper-items"><p>Node.js</p></li>
+          <li class="swiper-slide about-swiper-items"><p>React Native</p></li>
+          <li class="swiper-slide about-swiper-items"><p>Soft Skills</p></li>
+          <li class="swiper-slide about-swiper-items"><p>Git</p></li>
+        </ul>
       </div>
       <div class="swiper-button-next">
         <button type="button" class="next-about-button">
