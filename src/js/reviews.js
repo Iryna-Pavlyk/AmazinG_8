@@ -31,7 +31,7 @@ function showReviews(reviews) {
     } else {
         // Додавання відгуків до списку
        const slidesHTML = reviews.map(review =>`
-            <li class="swiper-slide">
+            <li class="swiper-slide" id="swiper-slide">
                 <div class="review-card" id="review_${review._id}"> 
                     <div class="avatar-review-js">
                         <img class="review-img-js" src="${review.avatar_url}" alt="Avatar of ${review.author}">

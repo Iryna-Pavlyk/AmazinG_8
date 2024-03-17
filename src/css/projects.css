@@ -195,6 +195,11 @@
   }
 }
 
+.projectsSwiper .swiper-slide-active {
+  background-color: transparent;
+  transition: all 0s ease 0s;
+}
+
 #swiper-wrapper-style {
   width: auto;
   height: auto;
