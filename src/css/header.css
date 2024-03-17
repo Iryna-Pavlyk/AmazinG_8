@@ -32,20 +32,34 @@
 }
 .header__order-link-container,
 .header__mobile-order-link-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #ED3B44;
     border-radius: 60px;
     letter-spacing: -0.02em;
     font-weight: 500;
 }
+.header__order-link-container:hover,
+.header__mobile-order-link-container:hover {
+    background-color: #e0373f;
+}
+.header__order-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
 /* Backdrop */
 .header__nav-link {
     display: block;
     font-weight: 500;
     letter-spacing: -0.02em;
     text-align: center;
+    transition: color 250ms;
+}
+.header__nav-link:hover {
+    color: #ED3B44;
 }
 
 

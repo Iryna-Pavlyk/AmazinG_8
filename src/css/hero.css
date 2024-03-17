@@ -23,9 +23,6 @@
     gap: 4px;
 }
 .hero__social-links-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 1px solid rgba(250, 250, 250, 0.2);
     min-width: 37px;
     height: 37px;
@@ -33,15 +30,25 @@
     font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.02em;
+    transition: border-color 250ms;
+}
+.hero__social-links-item:hover {
+    border-color: #fafafa;
 }
 .hero__social-link {
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
-.hero__email-item {
-    padding-left: 12px;
-    padding-right: 12px;
+.hero__email-link {
+    text-transform: none;
 }
 .hero__address {
+    width: 100%;
+    height: 100%;
     font-style: normal;
 }
 
