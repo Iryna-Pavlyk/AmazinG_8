@@ -1,7 +1,7 @@
 // Ініціалізація Swiper
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 export const swiper = new Swiper('.swiper-container', {
   modules: [Navigation, Keyboard],
@@ -42,5 +42,43 @@ new Swiper('.projectsSwiper', {
   navigation: {
     nextEl: '.swiper-button-next1',
     prevEl: '.swiper-button-prev1',
+  },
+});
+
+new Swiper('.about-swiper-container', {
+  loop: true,
+  setWrapperSize: true,
+  modules: [Navigation, Keyboard, Mousewheel],
+  spaceBetween: 0,
+  simulateTouch: true,
+  grabCursor: true,
+  slideActiveClass: 'about-slide-active',
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  mousewheel: {
+    invert: true,
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+    375: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1440: {
+      slidesPerView: 6,
+    },
   },
 });

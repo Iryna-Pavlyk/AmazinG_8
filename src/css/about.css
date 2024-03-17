@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  min-width: 0;
 }
 
 .container-title {
@@ -53,9 +54,14 @@
   padding-right: 0px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 1);
+}
+.about-section .ac .ac-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 /* Стили для кнопок аккордеона*/
 .about-section .ac-trigger.btn-text-about {
@@ -115,10 +121,13 @@
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
 }
+
 /* swipers styles */
-.about-swiper-container {
+
+.about-section .about-swiper-container {
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 .about-swiper-list {
   display: flex;
@@ -132,11 +141,12 @@
   text-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  max-width: 130px;
+  width: 130px;
   height: 130px;
   border-radius: 50%;
+  min-width: 0;
 }
-.swiper-slide-active {
+.about-slide-active {
   background-color: #ed3b44;
   transition: 0.3s all linear;
 }
@@ -172,8 +182,7 @@
   background-color: #ed3b44;
 }
 
-.next-about-button:after,
-.previous-about-button::after {
+.next-about-button:after {
   content: '';
   display: block;
   position: absolute;
@@ -187,10 +196,8 @@
   box-shadow: 0 0 10px 40px white;
 }
 
-.next-about-button:active:after,
-.previous-about-button:active::after {
+.next-about-button:active:after {
   box-shadow: 0 0 0 0 white;
-  position: absolute;
   border-radius: 4em;
   left: 0;
   top: 0;
@@ -198,24 +205,102 @@
   transition: 0s;
 }
 
-.next-about-button:active,
-.previous-about-button:active {
+.next-about-button:active {
   top: 1px;
 }
-.about-swiper-container {
-  position: relative;
-}
-.about-swiper-container .swiper-button-prev {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
+
+.about-swipper-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 55px;
 }
 
-.about-swiper-container .swiper-button-next {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 3;
-}
 /* ======= /ABOUT MOBILE SECTION ======= */
+
+/* +++++++ ABOUT TABLET SECTION (min-width: 768px)+++++++*/
+@media screen and (min-width: 768px) {
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    min-width: 0;
+  }
+
+  .container-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .container-title-text {
+    width: 704px;
+    height: 700px;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 64px;
+  }
+  .header-title {
+    font-size: 38px;
+    line-height: 1.05263;
+  }
+
+  .about-image {
+    width: 704px;
+    height: 700px;
+  }
+
+  .about-section .ac .ac-panel {
+    gap: 16px;
+  }
+
+  .about-section .ac-trigger.btn-text-about {
+    font-size: 16px;
+  }
+  .about-arrow {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-section .about-swiper-items {
+    width: 200px;
+    height: 200px;
+  }
+
+  .swiper-button-next {
+    top: 20%;
+    right: 0;
+  }
+  .about-swipper-wrapper {
+    gap: 64px;
+  }
+}
+/* ======= /ABOUT TABLET SECTION (min-width: 768px)======= */
+
+/* +++++++ ABOUT DESKTOP SECTION (min-width: 1440px)+++++++*/
+@media screen and (min-width: 1440px) {
+  .container-title {
+    flex-direction: row;
+  }
+
+  .about-image {
+    width: 680px;
+    height: 700px;
+  }
+
+  .about-section .ac .ac-panel {
+    width: 612px;
+    gap: 32px;
+    margin-right: 68px;
+    margin-left: auto;
+  }
+  .about-swipper-wrapper {
+    gap: 72px;
+  }
+}
+/* ======= /ABOUT DESKTOP SECTION (min-width: 1440px)======= */
