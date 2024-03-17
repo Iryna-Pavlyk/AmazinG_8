@@ -3,7 +3,7 @@
 .title-faq {
   font-weight: normal;
   font-size: 16px;
-  padding-bottom: 32px;
+  padding-bottom: 22px;
   padding-left: 1px;
   line-height: 1.5;
   letter-spacing: -0.02em;
@@ -38,10 +38,15 @@
 .faq-section .ac .ac-panel .ac-text {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
+  padding: 0px 0px 12px 1px;
   font-size: 15px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
+}
+
+.responsive-break {
+  display: block;
 }
 
 /* Стили стрелок в кнопках аккордеона */
@@ -108,4 +113,20 @@
 
 .ac-trigger:after {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .responsive-break {
+    display: none;
+  }
+  .faq-section .ac-trigger.btn-text-faq {
+    padding: 32px 130px 32px 1px;
+  }
+  .faq-section .ac .ac-panel .ac-text {
+    padding: 0px 47px 24px 1px;
+    width: 656px;
+  }
+  .faq-section .ac-trigger .arrow {
+    top: 32px;
+  }
 }
