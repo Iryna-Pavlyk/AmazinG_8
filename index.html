@@ -19,46 +19,62 @@
   <script type="module" crossorigin src="/AmazinG_8/commonHelpers.js"></script>
   <link rel="modulepreload" crossorigin href="/AmazinG_8/assets/vendor-2e5c0932.js">
   <link rel="stylesheet" href="/AmazinG_8/assets/vendor-f53b51ae.css">
-  <link rel="stylesheet" href="/AmazinG_8/assets/index-bbe83cd4.css">
+  <link rel="stylesheet" href="/AmazinG_8/assets/index-91e56eb2.css">
 </head>
 
 <body>
   <header class="header">
   <div class="header__container">
     <div class="header__logo">
-      <img src="../img/header/header.png" srcset="../img/header/header.png 1x, ../img/header/header@2x.png 2x" alt="Photo of Jefferson" class="header__logo-img" width="80" height="80">
+      <img
+        src="../img/header/header.png"
+        srcset="../img/header/header.png 1x, ../img/header/header@2x.png 2x"
+        alt="Photo of Jefferson"
+        class="header__logo-img"
+        width="80"
+        height="80"
+      />
       <p class="header__logo-para">jefferson*</p>
     </div>
     <button class="header__menu-btn">
       <span class="header__menu-btn-span">Menu</span>
       <svg class="header__burger-icon" width="28" height="28">
-        <use href="../img/sprite.svg#icon-burger"></use>
+        <use href="/AmazinG_8/assets/sprite-dca9d60e.svg#icon-burger"></use>
       </svg>
     </button>
     <div class="header__order-link-container">
-      <a href="" class="header__order-link">Order the project</a>
+      <a href="#work-together" class="header__order-link">Order the project</a>
     </div>
   </div>
 
-  <div class="header__backdrop">
+  <div class="header__backdrop visually-hidden">
     <button class="header__menu-close-btn">
       <svg class="header__close-icon" width="28" height="28">
-        <use href="../img/sprite.svg#icon-close"></use>
+        <use href="/AmazinG_8/assets/sprite-dca9d60e.svg#icon-close"></use>
       </svg>
     </button>
     <nav class="header__nav">
       <ul class="header__nav-list">
-        <li class="header__nav-item"><a href="" class="header__nav-link">About me</a></li>
-        <li class="header__nav-item"><a href="" class="header__nav-link">Benefits</a></li>
-        <li class="header__nav-item"><a href="" class="header__nav-link">Projects</a></li>
-        <li class="header__nav-item"><a href="" class="header__nav-link">FAQ</a></li>
+        <li class="header__nav-item">
+          <a href="#about" class="header__nav-link">About me</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#benefits" class="header__nav-link">Benefits</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#projects" class="header__nav-link">Projects</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#faq" class="header__nav-link">FAQ</a>
+        </li>
       </ul>
     </nav>
-      <div class="header__mobile-order-link-container">
-        <a href="" class="header__order-link">Order the project</a>
-      </div>
+    <div class="header__mobile-order-link-container">
+      <a href="#work-together" class="header__order-link">Order the project</a>
+    </div>
   </div>
 </header>
+
 
   <main>
     <section class="section-hero">
@@ -79,7 +95,7 @@
             </li>
             <li class="hero__social-links-item hero__email-item">
                 <address class="hero__address">
-                    <a href="mailto:lloydjefferson@gmail.com" class="hero__email-link"></a>
+                    <a href="mailto:lloydjefferson@gmail.com" class="hero__email-link">lloydjefferson@gmail.com</a>
                 </address>
             </li>
         </ul>
@@ -309,7 +325,7 @@
 </section>
 <!-- === /SECTION BENEFITS/ === -->
 
-    <section class="section section-projects">
+    <section class="section section-projects" id="projects">
   <div class="container">
     <h5 class="projects-title">projects</h5>
     <div class="slider projectsSwiper">
