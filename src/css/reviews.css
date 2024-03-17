@@ -1,3 +1,14 @@
+/* Custom scroll bar */
+html::-webkit-scrollbar {
+    width: 8px;
+    background: #1c1d20;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #ed3b44;
+    border-radius: 80px;
+}
+
 .reviews-section {
   background: #1c1d20;
 }
@@ -16,6 +27,7 @@
 #swiper-container-style {
   width: 100%;
   height: auto;
+overflow: hidden;
 }
 
 #swiper-slide {
