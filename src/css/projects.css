@@ -1,5 +1,6 @@
 .section-projects {
   background-color: #1c1d20;
+  overflow: hidden;
 }
 
 .projects-title {
@@ -68,9 +69,6 @@
   background-color: #242527;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-}
-
-.right-block-img {
 }
 
 .nav-buttons-style {
@@ -154,6 +152,7 @@
 @media screen and (min-width: 768px) {
   .left-block {
     padding: 64px;
+    padding-right: 146px;
   }
 
   .left-block-title {
@@ -186,6 +185,7 @@
     border-top-left-radius: 24px;
     border-top-right-radius: 0;
     border-bottom-left-radius: 24px;
+    padding-right: 130px;
   }
 
   .right-block {
@@ -193,4 +193,13 @@
     border-bottom-right-radius: 24px;
     border-top-right-radius: 24px;
   }
+}
+
+#swiper-wrapper-style {
+  width: auto;
+  height: auto;
+}
+
+#swiper-slide-style {
+  border: none;
 }

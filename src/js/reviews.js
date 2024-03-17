@@ -1,3 +1,4 @@
+
 // Функція для отримання відгуків з сервера
 async function fetchReviews() {
     try {
@@ -11,7 +12,7 @@ async function fetchReviews() {
             showErrorMessage(data.error);
         } else {
             showReviews(data);
-           
+            
         }
     } catch (error) {
         showErrorMessage('Failed to fetch reviews. Please try again later.');
@@ -29,10 +30,8 @@ function showReviews(reviews) {
         reviewsList.innerHTML = '<div class="swiper-slide">Not found</div>';
     } else {
         // Додавання відгуків до списку
-        reviews.forEach(review => {
-            const slide = document.createElement('li');
-            slide.classList.add('swiper-slide');
-            slide.innerHTML = `
+       const slidesHTML = reviews.map(review =>`
+            <li class="swiper-slide">
                 <div class="review-card" id="review_${review._id}"> 
                     <div class="avatar-review-js">
                         <img class="review-img-js" src="${review.avatar_url}" alt="Avatar of ${review.author}">
@@ -41,19 +40,18 @@ function showReviews(reviews) {
                         <p class="author-review-js">${review.author}</p>
                         <p class="text-review-js">${review.review}</p>
                     </div>
-                </div>`;
-            reviewsList.appendChild(slide);
-            
-        });
+               </div>
+                </li>`).join('');
+        reviewsList.innerHTML = slidesHTML;
        
     }
+     
 }
 
 // Функція для відображення повідомлення про помилку
 function showErrorMessage(message) {
     alert(message);
 }
-
 
 // Виклик функції отримання відгуків при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', fetchReviews);

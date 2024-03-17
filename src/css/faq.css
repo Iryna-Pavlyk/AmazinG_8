@@ -1,8 +1,11 @@
 /* Общие стили для раздела FAQ */
+
 .title-faq {
   font-weight: normal;
   font-size: 16px;
-  line-height: 150%;
+  padding-bottom: 22px;
+  padding-left: 1px;
+  line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.4);
 }
@@ -19,22 +22,31 @@
 
 /* Стили для кнопок аккордеона */
 .faq-section .ac-trigger.btn-text-faq {
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
+  padding: 1px 77px 1px 1px;
   font-size: 20px;
   color: rgba(250, 250, 250, 1);
   position: relative; /* Для корректного позиционирования псевдоэлемента */
-  padding-top: 10px; /* Отступ сверху для кнопки, чтобы полоса не перекрывала текст */
-  line-height: 150%;
+  padding-top: 20px; /* Отступ сверху для кнопки, чтобы полоса не перекрывала текст */
+  padding-bottom: 20px;
+  line-height: 1.5;
   letter-spacing: -0.02em;
 }
 
 /* Стили текста внутри аккордеона */
 .faq-section .ac .ac-panel .ac-text {
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
+  padding: 0px 0px 12px 1px;
+  font-size: 15px;
+  line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
+}
+
+.responsive-break {
+  display: block;
 }
 
 /* Стили стрелок в кнопках аккордеона */
@@ -51,6 +63,12 @@
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.faq-section .ac-trigger .arrow {
+  right: 0px;
+  top: 20px;
+  transform: translateY(-0%);
 }
 
 /* Управление отображением стрелок */
@@ -95,4 +113,20 @@
 
 .ac-trigger:after {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .responsive-break {
+    display: none;
+  }
+  .faq-section .ac-trigger.btn-text-faq {
+    padding: 32px 130px 32px 1px;
+  }
+  .faq-section .ac .ac-panel .ac-text {
+    padding: 0px 47px 24px 1px;
+    width: 656px;
+  }
+  .faq-section .ac-trigger .arrow {
+    top: 32px;
+  }
 }

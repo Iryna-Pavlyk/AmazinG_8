@@ -49,3 +49,4 @@ function setAriaExpanded(element, expanded) {
   const triggerButton = element.querySelector('.ac-trigger');
   triggerButton.setAttribute('aria-expanded', expanded);
 }
+// ======

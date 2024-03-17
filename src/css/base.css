@@ -18,7 +18,7 @@ body {
   .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 1px;
+    padding: 0 5px;
   }
 
   .section {
@@ -31,10 +31,6 @@ body {
     width: 375px;
     padding-left: 16px;
     padding-right: 16px;
-  }
-
-  .section {
-    padding-bottom: 64px;
   }
 }
 

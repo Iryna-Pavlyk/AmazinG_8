@@ -26,3 +26,18 @@ export const swiper = new Swiper('.swiper-container', {
     },
   },
 });
+
+new Swiper('.projectsSwiper', {
+  modules: [Navigation, Keyboard],
+  slidesPerView: 'auto',
+  loop: true,
+  keyboard: {
+    enabled: true,
+  },
+  spaceBetween: 500,
+  grabCursor: true,
+  navigation: {
+    nextEl: '.swiper-button-next1',
+    prevEl: '.swiper-button-prev1',
+  },
+});
