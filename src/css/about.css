@@ -116,24 +116,106 @@
   color: rgba(250, 250, 250, 0.4);
 }
 /* swipers styles */
-
+.about-swiper-container {
+  width: 100%;
+  height: auto;
+}
 .about-swiper-list {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   gap: 0px;
 }
-.about-swiper-items {
+.about-section .about-swiper-items {
   display: flex;
+  text-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  width: 130px;
+  max-width: 130px;
   height: 130px;
   border-radius: 50%;
+}
+.swiper-slide-active {
+  background-color: #ed3b44;
+  transition: 0.3s all linear;
+}
+
+.next-about-button,
+.previous-about-button {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  background-color: #1c1d20;
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  font-size: 16px;
+  color: white;
+  padding: 14px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  margin-top: 32px;
+}
+
+.previous-about-button {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.next-about-button:hover,
+.previous-about-button:hover {
+  transition-duration: 0.3s all linear;
   background-color: #ed3b44;
 }
-.swiper-button-prev {
-  fill: aliceblue;
+
+.next-about-button:after,
+.previous-about-button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+}
+
+.next-about-button:active:after,
+.previous-about-button:active::after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.next-about-button:active,
+.previous-about-button:active {
+  top: 1px;
+}
+.about-swiper-container {
+  position: relative;
+}
+.about-swiper-container .swiper-button-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.about-swiper-container .swiper-button-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
 }
 /* ======= /ABOUT MOBILE SECTION ======= */
