@@ -61,6 +61,12 @@ async function submitHandler(event) {
       email: inputsValue.email,
       comment: inputsValue.comments,
     });
+
+    emailInput.classList.remove('input-email-green');
+    emailInput.classList.remove('input-email-red');
+    textSuccess.style.display = 'none';
+    textInvalid.style.display = 'none';
+
     modal.classList.add('is-open');
     localStorage.removeItem(localStorageKey);
     form.reset();
