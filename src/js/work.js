@@ -6,9 +6,7 @@ const btnClose = document.querySelector('.btn-close-work');
 const textSuccess = document.querySelector('.input-email-text');
 const textInvalid = document.querySelector('.input-email-text2');
 const localStorageKey = 'key';
-const BASE_URL =
-  'https://65ef278dead08fa78a4fefb5.mockapi.io/contacts/portfolio-js';
-// const BASE_URL = 'https://portfolio-js.b.goit.study/api/requests';
+const BASE_URL = 'https://portfolio-js.b.goit.study/api/requests';
 
 function inputsPageReboot() {
   const localStorageValue = JSON.parse(localStorage.getItem(localStorageKey));
@@ -28,12 +26,13 @@ form.addEventListener('input', () => {
     comments: commentInput.value.trim(),
   };
   localStorage.setItem(localStorageKey, JSON.stringify(inputsValues));
+  isValidValue(emailInput.value);
 
-  if (emailInput.value.includes('@')) {
+  if (validValue === true) {
     emailInput.classList.add('input-email-green');
     textSuccess.style.display = 'block';
     textInvalid.style.display = 'none';
-  } else if (!emailInput.value.includes('@')) {
+  } else if (validValue === false) {
     emailInput.classList.add('input-email-red');
     emailInput.classList.remove('input-email-green');
     textSuccess.style.display = 'none';
@@ -46,6 +45,11 @@ form.addEventListener('input', () => {
     }
   }
 });
+
+let validValue;
+function isValidValue(value) {
+  return (validValue = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(value));
+}
 
 async function submitHandler(event) {
   try {
