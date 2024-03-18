@@ -1,7 +1,7 @@
 .sect-work-together {
   padding: 32px 0;
   background-image: url('../img/work/element-min.png');
-  background-position: 570px 0;
+  background-position: right;
   background-repeat: no-repeat;
 }
 
@@ -193,9 +193,6 @@
 /* Desctop */
 
 @media screen and (min-width: 1440px) {
-  .sect-work-together {
-    background-position: 1040px 0;
-  }
   .container-sect-work {
     padding-left: 196px;
   }
