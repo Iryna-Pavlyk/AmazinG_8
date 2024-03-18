@@ -1,4 +1,7 @@
 /* +++++++ ABOUT MOBILE SECTION +++++++*/
+.about-section {
+  margin-top: 64px;
+}
 .about-wrapper {
   display: flex;
   flex-direction: column;
@@ -214,6 +217,16 @@
 
 /* ======= /ABOUT MOBILE SECTION ======= */
 
+/* +++++++ ABOUT MOBILE SECTION (max-width: 374px)+++++++*/
+
+@media screen and (max-width: 374px) {
+  .about-swipper-wrapper {
+    gap: 15px;
+  }
+}
+
+/* ======= /ABOUT MOBILE SECTION (max-width: 374px) ======= */
+
 /* +++++++ ABOUT TABLET SECTION (min-width: 768px)+++++++*/
 @media screen and (min-width: 768px) {
   .about-wrapper {
@@ -276,6 +289,9 @@
 
 /* +++++++ ABOUT DESKTOP SECTION (min-width: 1440px)+++++++*/
 @media screen and (min-width: 1440px) {
+  .about-section {
+    margin-top: 96px;
+  }
   .about-container-title {
     flex-direction: row;
   }
