@@ -1,107 +1,122 @@
-
-.covers-second {
+.my-covers {
+  height: 100%;
+  margin: 0;
   padding: 0;
+}
+.covers-second {
+  background-image: url('..//img/covers/ellipse.png');
+  background-position: right;
+  
 }
 
 .covers-item {
   position: relative;
   overflow: hidden;
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .covers-item .my-covers-item-img {
-  height: auto;
-  opacity: 0;
-  transform: scale(0.5); 
-  transition: transform 0.5s ease, opacity 0.5s ease; 
-  margin-bottom: 20px; 
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  margin-bottom: 20px;
+  border-radius: 5%; 
+  width: 100%;
+  height: auto; 
 }
 
-.covers-item:hover .my-covers-item-img {
-  transform: scale(1); 
-  opacity: 1; 
+
+@media screen and (min-width: 768px) {
+  .covers-item:hover .my-covers-item-img {
+    transform: scale(1); 
+  }
 }
 
 .covers-item:nth-child(odd) .my-covers-item-img {
-  filter: grayscale(100%); 
+  filter: grayscale(100%);
 }
 
 .covers-item:nth-child(even) .my-covers-item-img {
-  filter: none; 
+  filter: none;
 }
 
 .covers-list {
   margin-right: 20px;
 }
 
+.covers-item {
+  will-change: transform, opacity;
+}
+
+@media screen and (scroll-animations: none) {
+  .covers-item {
+    will-change: auto;
+  }
+}
+
 @keyframes slideInFromBottomRight {
   from {
     transform: skewY(10deg) translateX(100%) translateY(100%) rotate(-30deg);
     opacity: 0;
-    width: 282px;
+
   }
   to {
-    transform: none; 
+    transform: none;
     opacity: 1;
-    width: auto; 
+    width: auto;
   }
 }
 
 #covers.animation-active .covers-item .my-covers-item-img {
-  animation-duration: 5s; 
+  animation-duration: 5s;
 }
 
 @media screen and (max-width: 767px) {
-  .covers-second {
-    background-image: url('..//img/covers/ellipse.png');
-    background-position: right, bottom; 
-  }
- 
-
+  
   .covers-item .my-covers-item-img {
-    width: 282px; 
     transform: none;
-    opacity: 1; 
-    animation: none; 
+    opacity: 1;
+    transition: none;
+    width: 100%;
+    height: auto;
   }
   .covers-list {
     margin-right: 15px;
+  }
+  .covers-item .my-covers-item-img {
+    width: 282px;
+    height: auto; 
   }
 }
 
 @media screen and (min-width: 768px) {
   .covers-second {
-    background-image: url('../img/covers/ellipse.png');
-    background-position: left,  center, bottom; 
-    background-repeat: repeat;
+    background-image: 
+    url('../img/covers/ellipse@2x.png'),
+    url('../img/covers/ellipse@2x.png');
+    background-position: top left, bottom;
+    background-repeat: repeat-x;
    
+
   }
-  .covers-second::before {
-   
-    background-image: url('../img/covers/ellipse.png');
-    background-repeat: repeat;
-  } 
-   
-  .my-covers-item-img {
-    width: 544px; 
+  .covers-item .my-covers-item-img {
+    width: 544px;
+    height: auto;
+  
   }
 }
 
 @media screen and (min-width: 1440px) {
   .covers-second {
-    background-image: url('..//img/covers/ellipse@2x.png');
-    background-position: left, center, bottom;
-    background-repeat: repeat;
-   
+    padding: 0;
+    background-image: 
+      url('../img/covers/ellipse@2x.png'), 
+      url('../img/covers/ellipse@2x.png'); 
+
+    background-position: left center, center, right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
   
-  }
-  .covers-second::before {
-    background-image: url('..//img/covers/ellipse@2x.png');
-    background-repeat: repeat;
-  } 
-  .covers-item {
-    margin-right: 20px;
-  }
 }
