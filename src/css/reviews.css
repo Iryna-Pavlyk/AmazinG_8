@@ -70,6 +70,8 @@ html::-webkit-scrollbar-thumb {
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
+  width: 295px;
+  height: 158px;
 }
 
 .next-reviews-button,
@@ -135,16 +137,3 @@ html::-webkit-scrollbar-thumb {
   top: 1px;
 }
 
-@media screen and (min-width: 320px) {
-.text-review-js {
-  height: 120px;
-  width: 295px;
-}
-}
-
-@media screen and (min-width: 1440px) {
-  .text-review-js {
-      height: 158px;
-      width: 284px;
-    }
-}
