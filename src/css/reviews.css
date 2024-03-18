@@ -27,7 +27,7 @@ html::-webkit-scrollbar-thumb {
 #swiper-container-style {
   width: 100%;
   height: auto;
-overflow: hidden;
+  overflow: hidden;
 }
 
 #swiper-slide {
@@ -95,17 +95,6 @@ overflow: hidden;
   margin-top: 32px;
 }
 
-/* .next-reviews-button:disabled,
-.previous-reviews-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-} */
-
-
-.previous-reviews-button {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-}
-
 .next-reviews-button:hover,
 .previous-reviews-button:hover {
   transition-duration: 0.3s all linear;
@@ -141,4 +130,21 @@ overflow: hidden;
 .next-reviews-button:active,
 .previous-reviews-button:active {
   top: 1px;
+}
+
+.next-reviews-button[disabled],
+.previous-reviews-button[disabled] {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px 5px rgba(237, 59, 68, 0.5);
+    border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.previous-reviews-button[disabled] .previous-arrow,
+.next-reviews-button[disabled] .next-arrow {
+  stroke: #3B3B3B;
+}
+
+.previous-arrow,
+.next-arrow {
+  stroke: #fafafa;
 }
