@@ -55,6 +55,3 @@ function showErrorMessage(message) {
 
 // Виклик функції отримання відгуків при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', fetchReviews);
-
-
-

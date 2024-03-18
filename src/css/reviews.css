@@ -1,3 +1,14 @@
+/* Custom scroll bar */
+html::-webkit-scrollbar {
+    width: 8px;
+    background: #1c1d20;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #ed3b44;
+    border-radius: 80px;
+}
+
 .reviews-section {
   background: #1c1d20;
 }
@@ -16,6 +27,7 @@
 #swiper-container-style {
   width: 100%;
   height: auto;
+overflow: hidden;
 }
 
 #swiper-slide {
@@ -83,6 +95,13 @@
   margin-top: 32px;
 }
 
+/* .next-reviews-button:disabled,
+.previous-reviews-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+} */
+
+
 .previous-reviews-button {
   border: 1px solid rgba(250, 250, 250, 0.2);
 }
@@ -93,7 +112,7 @@
   background-color: #ed3b44;
 }
 
-.next-reviews-button:after,
+.next-reviews-button::after,
 .previous-reviews-button::after {
   content: '';
   display: block;
