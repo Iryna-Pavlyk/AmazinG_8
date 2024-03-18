@@ -1,4 +1,7 @@
 /* +++++++ ABOUT MOBILE SECTION +++++++*/
+.about-section {
+  margin-top: 64px;
+}
 .about-wrapper {
   display: flex;
   flex-direction: column;
@@ -286,6 +289,9 @@
 
 /* +++++++ ABOUT DESKTOP SECTION (min-width: 1440px)+++++++*/
 @media screen and (min-width: 1440px) {
+  .about-section {
+    margin-top: 96px;
+  }
   .about-container-title {
     flex-direction: row;
   }
