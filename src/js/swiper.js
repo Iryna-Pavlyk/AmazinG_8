@@ -15,6 +15,11 @@ export const swiper = new Swiper('.swiper-container', {
   keyboard: {
     enabled: true,
   },
+  on: {
+    slideChange: function () {
+      checkEndOfList();
+    },
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -87,3 +92,21 @@ new Swiper('.about-swiper-container', {
     },
   },
 });
+
+// reviews-checkEndOfList
+function checkEndOfList() {
+    const nextButton = document.querySelector('.next-reviews-button');
+    const prevButton = document.querySelector('.previous-reviews-button');
+
+    if (swiper.isBeginning) {
+        prevButton.disabled = true;
+    } else {
+        prevButton.disabled = false;
+    }
+
+    if (swiper.isEnd) {
+        nextButton.disabled = true;
+    } else {
+        nextButton.disabled = false;
+    }
+}
