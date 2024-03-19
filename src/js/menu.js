@@ -1,7 +1,5 @@
-// Заміна імейла в хірo на напис "email" для екранів менше 375px, так як оригінальний імейл вілазить за межі його врапера
-// const emailText = document.querySelector(".hero__email-link")
-// emailText.textContent = window.innerWidth > 375 ? "email" : "lloydjefferson@gmail.com"
-// 
+
+const delay = async (ms) => { await new Promise(resolve => setTimeout(resolve, ms)) };
 
 const backdrop = document.querySelector(".header__backdrop")
 const menuBtn = document.querySelector(".header__menu-btn")
@@ -12,7 +10,13 @@ menuBtn.addEventListener("click", () => {
         backdrop.classList.remove("visually-hidden") :
             backdrop.classList.toggle("visually-hidden")
     })
-closeBtn.addEventListener("click", () => {
+closeBtn.addEventListener("click", async () => {
+    if (window.innerWidth < 768) {
+        backdrop.style.transform = "translateX(100%)"
+        // затримка в 250 мс потрібна зоб відобразилася анімація закриття меню і тільки потім поставити на нього клас visually-hidden
+        await delay(250)
+        backdrop.style.transform = null
+    }
     backdrop.classList.add("visually-hidden")
 })
 
