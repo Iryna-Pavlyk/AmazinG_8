@@ -8,7 +8,7 @@
 /* Title */
 
 .title-work-container {
-  margin-bottom: 55px;
+  margin-bottom: 64px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -27,6 +27,9 @@
   margin-bottom: 8px;
 }
 
+.title-sect-work:last-child {
+  margin-bottom: 0;
+}
 .span-sect-work {
   color: #ed3b44;
   margin-left: 10px;
@@ -40,6 +43,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 64px;
 }
 
 .input-sect-work {
@@ -93,7 +97,6 @@
   padding: 0;
   letter-spacing: -0.02em;
   text-transform: capitalize;
-  margin-bottom: 64px;
   color: currentColor;
   background-color: #ed3b44;
 }
@@ -145,7 +148,7 @@
   }
   .title-work-container {
     width: 542px;
-    margin-bottom: 54px;
+    margin-bottom: 18px;
   }
   .title-sect-work {
     font-size: 64px;
@@ -170,7 +173,6 @@
   .btn-sect-work {
     width: 150px;
     height: 150px;
-    margin-top: 0;
   }
   .address-work-container {
     gap: 8px;
