@@ -198,6 +198,8 @@
   }
 }
 
+/* Стилі свайпера */
+
 .projectsSwiper .swiper-slide-active {
   background-color: transparent;
   transition: all 0s ease 0s;
@@ -208,6 +210,6 @@
   height: auto;
 }
 
-#swiper-slide-style {
+.projectsSwiper-slide-style {
   border: none;
 }
