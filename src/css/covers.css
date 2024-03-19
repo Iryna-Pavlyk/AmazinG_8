@@ -1,10 +1,9 @@
 .my-covers {
   height: 100%;
   margin: 0;
-  padding: 0;
 }
 .covers-second {
-  background-image: url('..//img/covers/ellipse.png');
+  background-image: url('../img/covers/ellipse.png');
   background-position: right;
   
 }
@@ -14,13 +13,14 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 10px;
 }
 
 .covers-item .my-covers-item-img {
   opacity: 1;
   transform: scale(1);
   transition: transform 0.5s ease, opacity 0.5s ease;
-  margin-bottom: 20px;
   border-radius: 5%; 
   width: 100%;
   height: auto; 
@@ -40,11 +40,6 @@
 .covers-item:nth-child(even) .my-covers-item-img {
   filter: none;
 }
-
-.covers-list {
-  margin-right: 20px;
-}
-
 .covers-item {
   will-change: transform, opacity;
 }
@@ -81,9 +76,6 @@
     width: 100%;
     height: auto;
   }
-  .covers-list {
-    margin-right: 15px;
-  }
   .covers-item .my-covers-item-img {
     width: 282px;
     height: auto; 
@@ -96,7 +88,7 @@
     url('../img/covers/ellipse@2x.png'),
     url('../img/covers/ellipse@2x.png');
     background-position: top left, bottom;
-    background-repeat: repeat-x;
+    background-repeat: repeat;
    
 
   }
@@ -109,14 +101,8 @@
 
 @media screen and (min-width: 1440px) {
   .covers-second {
-    padding: 0;
-    background-image: 
-      url('../img/covers/ellipse@2x.png'), 
-      url('../img/covers/ellipse@2x.png'); 
-
-    background-position: left center, center, right center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-position: left, center, bottom;
+    
   }
   
 }
