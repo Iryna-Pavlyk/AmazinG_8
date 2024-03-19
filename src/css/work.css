@@ -63,6 +63,26 @@
   text-overflow: ellipsis; /* Відображаємо "..." для тексту, який не поміщається */
 }
 
+.btn-sect-work {
+  margin-top: 16px;
+  border: none;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 0;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  color: currentColor;
+  background-color: #ed3b44;
+}
+
+::placeholder {
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
 /* For JS */
 
 .input-email-text {
@@ -86,26 +106,6 @@
 }
 
 /* For JS */
-
-.btn-sect-work {
-  margin-top: 16px;
-  border: none;
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  padding: 0;
-  letter-spacing: -0.02em;
-  text-transform: capitalize;
-  color: currentColor;
-  background-color: #ed3b44;
-}
-
-::placeholder {
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
-}
 
 /* /Form */
 
@@ -173,6 +173,7 @@
   .btn-sect-work {
     width: 150px;
     height: 150px;
+    margin-top: 0;
   }
   .address-work-container {
     gap: 8px;
