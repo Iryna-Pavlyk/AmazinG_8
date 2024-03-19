@@ -83,6 +83,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            transform: translateX(0);
+            transition: transform 250ms;
+        }
+        .visually-hidden.header__backdrop {
+            transform: translateX(100%);
         }
         .header__menu-close-btn {
             display: flex;
