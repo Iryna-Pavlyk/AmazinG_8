@@ -27,6 +27,7 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
   height: auto;
   overflow: hidden;
+  margin-bottom: 32px;
 }
 
 #swiper-slide {
@@ -38,7 +39,6 @@ html::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
 }
-
 
 #swiper-slide:hover {
   transform: scale(1.02);
@@ -92,7 +92,6 @@ html::-webkit-scrollbar-thumb {
   cursor: pointer;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
-  margin-top: 32px;
 }
 
 .next-reviews-button:hover,
