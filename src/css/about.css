@@ -223,6 +223,9 @@
   .about-swipper-wrapper {
     gap: 15px;
   }
+  .about-container-title-text {
+    width: 100%;
+  }
 }
 
 /* ======= /ABOUT MOBILE SECTION (max-width: 374px) ======= */
