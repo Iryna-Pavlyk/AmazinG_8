@@ -21,9 +21,7 @@ closeBtn.addEventListener("click", async () => {
 })
 
 backdrop.addEventListener("click", e => {
-    if (!e.target.classList.contains("header__nav-link")) {
-        return
-    } else {
+    if (e.target.classList.contains("header__nav-link") || e.target.classList.contains("header__order-link")) {
         backdrop.classList.add("visually-hidden")
     }
 })
