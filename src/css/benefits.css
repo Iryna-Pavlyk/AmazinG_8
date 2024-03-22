@@ -33,7 +33,7 @@
 
 .benefits-list-item:hover {
   transform: scale(1.02);
-  box-shadow: 0px 0px 10px 5px rgba(237, 59, 68, 0.5);
+  box-shadow: inset 0px 0px 10px 5px rgba(237, 59, 68, 0.5);
 }
 
 .container-icon {
@@ -77,7 +77,7 @@
 
 .order:hover {
   transform: scale(1.04);
-  box-shadow: 0px 0px 10px 5px rgba(237, 59, 68, 0.5);
+  box-shadow: inset 0px 0px 10px 5px rgba(237, 59, 68, 0.5);
 }
 
 .order-project {
@@ -91,7 +91,14 @@
   .container-title {
     align-items: flex-start;
   }
-
+  .benefits-list-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px 5px rgba(237, 59, 68, 0.5);
+  }
+  .order:hover {
+    transform: scale(1.04);
+    box-shadow: 0px 0px 10px 5px rgba(237, 59, 68, 0.5);
+  }
   .benefits-list {
     flex-direction: row;
     flex-wrap: wrap;
