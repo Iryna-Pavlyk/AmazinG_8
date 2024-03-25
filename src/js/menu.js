@@ -25,3 +25,11 @@ backdrop.addEventListener("click", e => {
         backdrop.classList.add("visually-hidden")
     }
 })
+
+
+if (window.innerWidth > 767) {
+    const orderTabletLink = document.querySelector("#desk-order-link")
+    orderTabletLink.addEventListener("click", () => {
+        backdrop.classList.add("visually-hidden")
+    })
+}
